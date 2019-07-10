@@ -1,6 +1,9 @@
 # nextgen-ansible
 Overview
-I’d like to envision an evolution of the Ansible Tower Workshop. One that leverages storytelling and showmanship, focusing only on selling the virtues and simplicity of Ansible and Tower. The question I have asked myself is: “If I am on the sales floor to sell you a Maserati, would I even discuss how you would change the oil, rotate the tires or install the upgraded stereo?” If you’re buying a Maserati you’ve got people do that for you. What you want to buy is the Maserati and its performance.  What we have today is a very effective workshop for Open Source (Ansible) Evangelism and it’s great for the Community. However, I’ve seen that the Community types rarely write the checks. The ones who write the checks are the same ones driving the Maseratis.
+- This is an internal explanation
+- I’d like to envision an evolution of the Ansible Tower Workshop. One that leverages storytelling and showmanship, focusing only on selling the virtues and simplicity of Ansible and Tower. 
+ - The question I have asked myself is: “If I am on the sales floor to sell you a Maserati, would I even discuss how you would change the oil, rotate the tires or install the upgraded stereo?” If you’re buying a Maserati you’ve got people do that for you. What you want to buy is the Maserati and its performance.  
+ - What we have today is a very effective workshop for Open Source (Ansible) Evangelism and it’s great for the Community. However, I’ve seen that the Community types rarely write the checks. The ones who write the checks are the same ones driving the Maseratis.
 
 As an example a director who recently hosted an Ansible Workshop provided the following feedback. He doesn't need to know how to install Ansible, Tower or a license, he just wanted to see it work. As presenters, we must strive to grab and maintain our customers’ attention from start to finish. Just one small diversion, such as having all of the participants go to email to get their licenses, exposes them to the temptation to “just glance” at the other things in the inbox and nothing good for the workshop can ever come from that. If the student is a Community advocate he or she will be fairly easy to get back on track. However, someone who is able to write the check will likely have pressing business issues jump out of the inbox at them and any presenter could have a struggle getting them fully focussed on Tower after that. Put another way, the presenter is playing the part of the magician and it’s really important that he or she can control which hand the audience is watching.
  
@@ -21,22 +24,29 @@ Environment
 - Basic inventory and users pre-populated (a future version might pull a dynamic inventory from Satellite and users from IDM but I don’t want to boil the ocean here)
 - F5 or similar virtual loadbalancer appliance to replace server1 above which would greatly enhance the appeal to Network admins. I can make the pitch using ha-proxy but seeing an appliance they are far more likely to be using will reduce the distraction and doubt and get them focussed on the value.
 
-- “Tower can do complicated things quickly efficiently and accurately saving you money, letting you put your high value workers to better use and improving your C-Sat.” 
+- “Tower can do complicated things quickly, efficiently and accurately saving you money, letting your high value workers concentrate on what makes them valuable and helps keep your customers satsified.”
   - Part of the telling is showing them the magic, demonstrate building out a two tier application with redundant web servers and a load balancer using a workflow, possibly a fast forward video to save time and keep interest.
   - Tell them about Ansible and begin their path to the DevOps side with hands on role playing:
   
 - “You are a sysadmin and need to install software on new servers to deliver a database server and two web servers for a new project. Here is a simple playbook that you can type in yourself or copy/paste into your editor in this particular directory and save using this filename. Once done, run run this playbook using this command.”
 
 - “You are a DBA and must configure a database server recently set up by your sysadmin peer. Here is a simple play book that you can enter yourself or copy/paste into your editor in this particular directory and save using this filename. Once done, run this playbook from the command line.”
+
 - “You are a web admin and must instantiate an application makes a call to the database server your buddy configured above. Here is a simple play book that you can enter yourself or copy/paste into your editor in this particular directory and save using this filename. Once done, run this playbook from the command line.”
+
 - “You are a Network Admin and must configure a loadbalancer (either server1 or the appliance) to support the efforts of your peers. Here is a simple play book that you can enter yourself or copy/paste into your editor in this particular directory and save using this filename. Once done, run this playbook from the command line.”
+
 - “You are a QA Analyst and must test the application. Enter this URL into the browser on your virtual desktop (Windows or Linux). That’s great but you just heard that your peers all used some automation and that you can automate your testing. Here is a simple play book that you can enter yourself or copy/paste into your editor in this particular directory and save using this filename. Once done, run this playbook from the command line.”
+
 - I am the Workshop leader and just accidentally wiped out all of your work (actually resetting the servers above to their original state), let’s get lunch and then sort out the mess I just made.
+
 - You are a system admin and have been tasked with discovering/verifying specific facts across the organization.
 
 Tower
 Now that we’ve eaten and calmed down let’s walk through the Tower UI to get familiar. Along the way we’ll note that copies of the work you did from the CLI have been installed for you and they have been combined into a workflow.
+
 - “You are the Operations Engineer on duty and have gotten the call at 2am that the application environment above has been wiped out by a random maniac posing as a Solution Architect. The servers have been reprovisioned and you are to execute a workflow to re-instantiate the application automatically. Your documentation explains that the workflow will go through all of the steps used to build the environment and put it back as it was without having to wake the experts who created the automation. Having been to Tower Workshop you are confident and know that you will be successful because there will be no typos and that you will be protected because Tower will log all activity and show that you complied with policy. Make it so!”
+
 - “You are one of the Admins in charge of Tower and the Ops Engineer calls with a concern.  He has been assigned to update webservers’ OS as well as the application. This is changing something that’s not broken instead of fixing something that is and he has asked for a walk through to be sure he understands what he’s doing this first time. As an Operator he does not have the ability to edit or really even view much under the covers but you do. We’ll open a complex playbook in an editor and walk through the plays which will:
 	- Validate that the application is working properly by hitting the IPs of the loadbalancer, server2 and server3 individually and confirming that responses are correct (server2 and server3 will serve up essentially the same content but will be differentiated by an identifier in one corner showing the hostname as instantiated via a jinja2 template deployed from the web admin’s playbook)
 	- Take server2 out of the loadbalancer 
@@ -55,8 +65,9 @@ Now that we’ve eaten and calmed down let’s walk through the Tower UI to get 
 	- Validate that traffic is still flowing properly through the loadbalancer
 
 - “As your now more confident Ops Persona you execute the playbook (or perhaps we present this as a workflow) above and verify success in the Tower UI”
+
 - “You are the Director of your division (or perhaps an auditor) and want to make sure that the update you saw on the schedule for today was a success. You log into Tower and review the job history.”
+
 - As your Ops Persona you are advised that there is a new BU using a similar infrastructure to the one you worked on earlier and their servers have been deployed. You have been assigned to deploy the application stack. You step through the dialog for the workflow from above and take advantage of a survey to select the new BU which properly brands the web UI and elements of the database config making use of Jinja2 variablization.
 
 - Tell them what you told them “Ansible Tower will change your life!” Discuss the power of Ansible and the force multiplier nature of Tower, Q&A, walk through the ROI Calculator with all of the participants, define next steps (PoC, PO, Services Engagement, Training).
-

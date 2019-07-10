@@ -1,10 +1,10 @@
 # nextgen-ansible
-Verify commit
 Overview
+
 - This is an internal explanation
-- I’d like to envision an evolution of the Ansible Tower Workshop. One that leverages storytelling and showmanship, focusing only on selling the virtues and simplicity of Ansible and Tower. 
- - The question I have asked myself is: “If I am on the sales floor to sell you a Maserati, would I even discuss how you would change the oil, rotate the tires or install the upgraded stereo?” If you’re buying a Maserati you’ve got people do that for you. What you want to buy is the Maserati and its performance.  
- - What we have today is a very effective workshop for Open Source (Ansible) Evangelism and it’s great for the Community. However, I’ve seen that the Community types rarely write the checks. The ones who write the checks are the same ones driving the Maseratis.
+	- I’d like to envision an evolution of the Ansible Tower Workshop. One that leverages storytelling and showmanship, focusing only on selling the virtues and simplicity of Ansible and Tower. 
+ 	- The question I have asked myself is: “If I am on the sales floor to sell you a Maserati, would I even discuss how you would change the oil, rotate the tires or install the upgraded stereo?” If you’re buying a Maserati you’ve got people do that for you. What you want to buy is the Maserati and its performance.  
+     - What we have today is a very effective workshop for Open Source (Ansible) Evangelism and it’s great for the Community. However, I’ve seen that the Community types rarely write the checks. The ones who write the checks are the same ones driving the Maseratis.
 
 As an example a director who recently hosted an Ansible Workshop provided the following feedback. He doesn't need to know how to install Ansible, Tower or a license, he just wanted to see it work. As presenters, we must strive to grab and maintain our customers’ attention from start to finish. Just one small diversion, such as having all of the participants go to email to get their licenses, exposes them to the temptation to “just glance” at the other things in the inbox and nothing good for the workshop can ever come from that. If the student is a Community advocate he or she will be fairly easy to get back on track. However, someone who is able to write the check will likely have pressing business issues jump out of the inbox at them and any presenter could have a struggle getting them fully focussed on Tower after that. Put another way, the presenter is playing the part of the magician and it’s really important that he or she can control which hand the audience is watching.
  

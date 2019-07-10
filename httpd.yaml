@@ -1,0 +1,52 @@
+---
+- name: Webserver management
+  hosts: webservers
+  become: yes
+
+  tasks:
+  - name: install "{{ httpd }}" if not installed
+    yum:
+      name: "{{ httpd }}"
+      state: latest
+      when:  (is_installed.results|length == 1) or (is_installed.results[1].yumstate != 'installed')
+
+  - name: make sure httpd running
+    systemd:
+      state: started
+      name: httpd
+
+  - name: Enable port 80
+    firewalld:
+      service: http
+      permanent: true
+      state: enabled
+
+  - name: Enable port 443
+    firewalld:
+      service: https
+      permanent: true
+      state: enabled
+
+  - name: Restart firewalld to reload the config
+    service:
+      name: firewalld
+      state: restarted
+
+  - name: Fetch the index.html file from git
+    git: 
+        repo=git@github.com:you/your-git-repo.git 
+        dest=/var/www/html/index.html
+    sudo_user: <user_with_key>
+
+  - name: Enable the server in haproxy
+    haproxy:
+      state: enabled
+      backend: app
+      host: "{{ inventory_hostname }}"
+      socket: /var/lib/haproxy/stats
+      wait: yes
+    delegate_to: "{{ item }}"
+    with_items: "{{ groups.lbserver }}"
+
+    # Check-in test 
+    

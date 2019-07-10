@@ -1,4 +1,5 @@
 # nextgen-ansible
+Verify commit
 Overview
 - This is an internal explanation
 - I’d like to envision an evolution of the Ansible Tower Workshop. One that leverages storytelling and showmanship, focusing only on selling the virtues and simplicity of Ansible and Tower. 

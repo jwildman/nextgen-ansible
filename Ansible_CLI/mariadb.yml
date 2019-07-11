@@ -1,0 +1,13 @@
+---
+- name: DB server management
+  hosts: dbservers
+  become: yes
+  
+  tasks:
+  - name: install "{{ dbserver_pkg }}" if not installed
+    yum:
+      name: "{{ dbserver_pkg }}"
+      state: latest
+      when: (is_installed.results|length == 1) or (is_installed.results[1].yumstate != 'installed')
+  
+

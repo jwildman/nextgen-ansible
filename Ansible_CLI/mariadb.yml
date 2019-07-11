@@ -9,5 +9,21 @@
       name: "{{ dbserver_pkg }}"
       state: latest
       when: (is_installed.results|length == 1) or (is_installed.results[1].yumstate != 'installed')
+
+  - name: make sure httpd running
+      systemd:
+        state: started
+        name: "{{ dbserver_pkg }}"
+
+  - name: enable db port
+      firewalld:
+        service: mysql
+        permanent: true
+        state: enabled
+  
+  - name: Restart firewalld to reload the config
+    service:
+      name: firewalld
+      state: restarted
   
 

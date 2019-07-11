@@ -1,10 +1,3 @@
-Playbooks
-- install http and  index.html (TY)
-- install mariadb, basic configuration (JW)
-- install data
-- install php app
-- 
-
 Infrastructure
 - verify all ips, hostnames
 - add other keys to workstation

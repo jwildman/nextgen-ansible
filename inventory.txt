@@ -11,3 +11,9 @@ loadbalancer.example.com ansible_host=10.0.0.11
 [tower]
 tower.example.com ansible_host=10.0.0.14
 
+[rhel]
+loadbalancer.example.com ansible_host=10.0.0.11
+dbserver.example.com ansible_host=10.0.0.15
+webserver1.example.com ansible_host=10.0.0.12
+webserver2.example.com ansible_host=10.0.0.13
+tower.example.com ansible_host=10.0.0.14

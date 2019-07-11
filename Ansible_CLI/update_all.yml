@@ -1,0 +1,9 @@
+---
+- name: upgrade rhel packages
+  hosts: rhel
+
+  tasks:
+    - name: upgrade all packages
+      yum:
+             name: '*'
+             state: latest

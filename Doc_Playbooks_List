@@ -1,0 +1,28 @@
+Part 1:
+    sysadmin playbooks:
+        1) deploy software for DB server
+        2) deploy software for Web server (2)
+    
+    DBA playbooks:
+        1) Configure database and harden it
+        2) Use db backup to seed the database
+    
+    Web admin playbooks:
+        1) Configure an application to use the new DB
+    
+    Network admin:
+        1) Configure loadbalancer to manage the application
+    
+    QA Analyst:
+        1) Run a basic sanity test against the application.
+
+
+Part 2:
+    Housekeeping:
+        1) Build a playbook to "reset" environments
+    
+    Operations engineer:
+        1) Update servers with and without reboot
+        2) Manipulate pool members in the loadbalancer
+        3) Check Insights reports after updates to look for vulnerabilities
+        

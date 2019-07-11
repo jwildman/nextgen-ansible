@@ -1,0 +1,13 @@
+[webservers]
+webserver1.example.com ansible_host=10.0.0.12
+webserver2.example.com ansible_host=10.0.0.13
+
+[dbservers]
+dbserver.example.com ansible_host=10.0.0.15
+
+[loadbalancer]
+loadbalancer.example.com ansible_host=10.0.0.11
+
+[tower]
+tower.example.com ansible_host=10.0.0.14
+

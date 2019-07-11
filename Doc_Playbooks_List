@@ -1,6 +1,6 @@
 Part 1:
     sysadmin playbooks:
-        1) deploy software for DB server
+        1) deploy software for DB server (Jim)
         2) deploy software for Web server (2)
     
     DBA playbooks:
@@ -9,12 +9,23 @@ Part 1:
     
     Web admin playbooks:
         1) Configure an application to use the new DB
+	2) Take a serve out of the LB
+		- prove it
+	3) Place a server back into the LB
+		- prove it
+	4) Manipulate web pages using Jinja templates
     
     Network admin:
         1) Configure loadbalancer to manage the application
+	2) Change the lb params - prove it
     
     QA Analyst:
         1) Run a basic sanity test against the application.
+
+    Manager:
+	1) Verify who updated the web pages
+	2) Review the log files
+	3) Review tlog files?
 
 
 Part 2:

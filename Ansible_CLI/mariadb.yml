@@ -10,7 +10,7 @@
       state: latest
       when: (is_installed.results|length == 1) or (is_installed.results[1].yumstate != 'installed')
 
-  - name: make sure httpd running
+  - name: make sure "{{ dbserver_pkg }}" is running
       systemd:
         state: started
         name: "{{ dbserver_pkg }}"

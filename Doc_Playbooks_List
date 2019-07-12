@@ -1,7 +1,7 @@
 Part 1:
     sysadmin playbooks:
         1) deploy software for DB server (Jim)
-        2) deploy software for Web server (2)
+        2) deploy software for Web server (2) (Tom)
     
     DBA playbooks:
         1) Configure database and harden it

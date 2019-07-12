@@ -15,6 +15,11 @@
     systemd:
       state: started
       name: httpd
+      
+  - name: enable service httpd
+  systemd:
+    name: httpd
+    enabled: yes
 
   - name: Enable port 80
     firewalld:

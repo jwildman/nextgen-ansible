@@ -15,6 +15,11 @@
         state: started
         name: "{{ dbserver_pkg }}"
 
+  - name: enable service "{{ dbserver_pkg }}" 
+  systemd:
+    name: "{{ dbserver_pkg }}"
+    enabled: yes
+
   - name: enable db port
       firewalld:
         service: mysql
